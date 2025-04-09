@@ -29,13 +29,11 @@ jobs:
       - name: Configure Project
         run: meson setup builddir/
         env:
-          CXX: g++
+          CXX: g++-14.2
       - name: Run Tests
         run: meson test -C builddir/ -v
       - name: Build App
         run: >
-          g++
-          strings /usr/bin/g++ | grep -e -std=
           meson compile -C builddir/ -v
       - name: Run App
         if: runner.os != 'Windows'
