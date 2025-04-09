@@ -1,7 +1,7 @@
 #include <libfib.hpp>
-#include <print>
+#include <iostream>
 
 int main() {
   const unsigned idx = 10;
-  std::print("Fib {} is {}\n", idx, fibonacci(idx));
+  std::cout << "Fib " << idx << " is " << fibonacci(idx) << std::endl;
 }
