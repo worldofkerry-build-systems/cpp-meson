@@ -2,6 +2,6 @@
 #include <print>
 
 int main() {
-  std::print("Hello World!\n");
-  std::print("{}\n", fibonacci(10));
+  const unsigned idx = 10;
+  std::print("Fib {} is {}\n", idx, fibonacci(idx));
 }
