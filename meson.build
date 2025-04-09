@@ -1,2 +1,6 @@
 project('tutorial', 'c')
-executable('demo', 'main.c')
+
+cpp_meson_lib_sp = subproject('cpp_meson_lib')
+cpp_meson_lib_dep = cpp_meson_lib_sp.get_variable('inih_dep')
+
+executable('demo', 'main.c',dependencies:[cpp_meson_lib_dep])
