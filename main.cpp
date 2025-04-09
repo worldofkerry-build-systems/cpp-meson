@@ -4,5 +4,5 @@
 int main(int argc, char **argv) {
   printf("Hello World");
   const auto result = fib(10);
-  return 0;
+  assert(result == 55);
 }
