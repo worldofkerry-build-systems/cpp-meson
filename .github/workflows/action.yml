@@ -33,16 +33,13 @@ jobs:
       - name: Run Tests
         run: meson test -C builddir/ -v
       - name: Build App
-        run: >
-          meson compile -C builddir/ -v
+        run: meson compile -C builddir/ -v          
       - name: Run App
         if: runner.os != 'Windows'
         run: ./builddir/main
       - name: Run App
         if: runner.os == 'Windows'  
-        run: >
-          dir builddir;
-          .\builddir\main.exe
+        run: .\builddir\main.exe
       - name: Upload Test Log
         uses: actions/upload-artifact@v4
         if: failure()
