@@ -2,5 +2,5 @@
 #include <iostream>
 
 int main() {
-  std::cout << fib(10) << std::endl;
+  std::cout << fibonacci(10) << std::endl;
 }
