@@ -1,6 +1,7 @@
 #include <libfib.hpp>
-#include <iostream>
+#include <print>
 
 int main() {
-  std::cout << fibonacci(10) << std::endl;
+  std::print("Hello World!\n");
+  std::print("{0}\n", fibonacci(10));
 }
