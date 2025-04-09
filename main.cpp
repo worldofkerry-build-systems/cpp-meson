@@ -3,5 +3,5 @@
 
 int main() {
   std::print("Hello World!\n");
-  std::print("{0}\n", fibonacci(10));
+  std::print("{}\n", fibonacci(10));
 }
