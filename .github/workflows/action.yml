@@ -37,6 +37,7 @@ jobs:
       - name: Run App
         shell: bash
         run: |
+          ls builddir/ && \
           ./builddir/main${{ matrix.os == 'windows-latest' && '.exe' || '' }}
       - name: Upload Test Log
         uses: actions/upload-artifact@v4
