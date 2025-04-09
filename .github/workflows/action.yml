@@ -32,6 +32,8 @@ jobs:
           CXX: g++
       - name: Run Tests
         run: meson test -C builddir/ -v
+      - name: Run App
+        run: ./builddir/prog
       - name: Upload Test Log
         uses: actions/upload-artifact@v4
         if: failure()
