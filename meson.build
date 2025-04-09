@@ -1,4 +1,5 @@
-project('tutorial', 'c')
+project('tutorial', 'cpp',
+    default_options : ['cpp_std=c++23'])
 
 libfib_proj = subproject('libfib')
 libfib_dep = libfib_proj.get_variable('libfib_dep')
