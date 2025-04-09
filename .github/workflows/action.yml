@@ -36,6 +36,7 @@ jobs:
         run: >
           cd builddir &&
           ls . &&
+          cat ../subprojects/libfib/include/libfib.hpp &&
           meson compile &&
           ./main
       - name: Upload Test Log
