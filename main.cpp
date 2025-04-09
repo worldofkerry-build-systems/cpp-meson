@@ -1,8 +1,6 @@
-#include <stdio.h>
 #include <libfib.h>
+#include <iostream>
 
-int main(int argc, char **argv) {
-  printf("Hello World");
-  const auto result = fib(10);
-  assert(result == 55);
+int main() {
+  std::cout << fib(10) << std::endl;
 }
