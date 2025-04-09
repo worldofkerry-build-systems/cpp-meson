@@ -37,11 +37,7 @@ jobs:
       - name: Run App
         shell: bash
         run: |
-          if [ "$RUNNER_OS" == "Windows" ]; then
-            ./builddir/main.exe
-          else
-            ./builddir/main
-          fi
+          ./builddir/main${{ matrix.os == 'windows-latest' && '.exe' || '' }}
       - name: Upload Test Log
         uses: actions/upload-artifact@v4
         if: failure()
