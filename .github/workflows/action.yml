@@ -33,7 +33,10 @@ jobs:
       - name: Run Tests
         run: meson test -C builddir/ -v
       - name: Build App
-        run: meson compile -C builddir/ -v
+        run: >
+          g++
+          strings /usr/bin/g++ | grep -e -std=
+          meson compile -C builddir/ -v
       - name: Run App
         if: runner.os != 'Windows'
         run: ./builddir/main
