@@ -1,4 +1,4 @@
-#include <libfib.h>
+#include <libfib.hpp>
 #include <iostream>
 
 int main() {
