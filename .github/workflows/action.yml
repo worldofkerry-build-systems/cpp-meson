@@ -36,12 +36,11 @@ jobs:
         run: meson compile -C builddir/ -v
       - name: Run App
         if: runner.os != 'Windows'
-        run: |
-          ./builddir/main
+        run: ./builddir/main
       - name: Run App
         if: runner.os == 'Windows'  
-        run: |
-          dir builddir && \
+        run: >
+          dir builddir;
           .\builddir\main.exe
       - name: Upload Test Log
         uses: actions/upload-artifact@v4
